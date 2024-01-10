@@ -35,24 +35,57 @@ aside {
 }
 .content {
   background-color: #fdeffd;
-  height: 400px;
+  height: 200px;
   width: 70%;
   border-radius: 20px;
   padding: 10px;
 }
 .cards {
-  background-color: #fdeffd;
+  background-color: #e5f4fa;
   height: 100%;
   /* width: 100%; */
   border-radius: 20px;
+  display: flex;
   padding: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 .bag {
   background-color: #e5f4fa;
-  height: 400px;
+  height: 200px;
   padding: 10px;
   width: 30%;
   border-radius: 20px;
+}
+.card {
+  max-width: 300px;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  height: 400px;
+}
+
+.card img {
+  width: 100%;
+  /* height: 100%; */
+  object-fit: cover;
+  border-bottom: 1px solid #ccc;
+}
+
+.card-info {
+  padding: 10px;
+}
+
+.card-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.card-price {
+  color: #007bff;
+  font-size: 16px;
 }
 /* Tablet breakpoint */
 @media only screen and (max-width: 780px) {
@@ -72,11 +105,15 @@ aside {
   .flex-col {
     padding: 10px 0;
   }
+  .card {
+    width: 100%;
+    /* border: 2px solid red; */
+  }
   .main-section {
     flex-direction: column;
   }
   .content {
-    width: auto;
+    width: 100%;
   }
   .bag {
     width: auto;
