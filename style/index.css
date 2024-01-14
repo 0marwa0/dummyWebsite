@@ -1,23 +1,71 @@
+body{
+  font-family: Poppins;
+}
+ #splide {
+            width: 100%; /* Set the width to 100% */
+            height: 160px;
+            margin: 0;   /* Remove any default margin */
+            padding: 0;  /* Remove any default padding */
+        }
+.action{
+  display: flex;
+  justify-content: space-between;
+}
+.card-btn{
+  padding:0 5px;
+  color: rgb(107, 54, 4);
+  border-radius: 5px;
+  cursor: pointer;
+     box-shadow: 0 0 5px rgba(22, 15, 2, 0.3);
+
+}
+#cartCount{
+  background-color:rgb(226, 203, 181);
+   padding: 3px 6px;
+   border-radius: 10px ;
+   height: max-content;
+   font-size: 14px;
+
+}
+.nav-cart{
+  display: flex; justify-content: center;
+       width: auto; gap: 2px; align-items: end;
+}
 nav {
   border: 1px solid rgb(107, 54, 4);
   height: 40px;
   padding: 10px;
+  display: flex;
+  width: auto;
+  justify-content: start;
 }
 .imageContainer{
-  width: 300px;
-  height: 300px;
+  width: 200px;
+  height: 200px;
 }
 .imageContainer img{
   width: 100%;
   height: 100%;
  object-fit: contain 
 }
+.card {
+  max-width: 200px;
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  height: 300px;
+   overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  border-radius: 20px;
+ 
+}
 .flex-col {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 93%;
   gap: 20px;
-  padding: 20px;
+  padding: 20px 0;
 }
 .logo-icon {
   width: 30px;
@@ -28,90 +76,156 @@ aside {
   height: 100vh;
   padding: 10px;
   margin-top: 20px;
-  width: 20%;
+  width: 70%;
+ 
   color: white;
 }
 .main-layout {
   display: flex;
   flex-direction: row;
+  width: 100%;
 }
 .main-section {
   display: flex;
   /* width: 95%; */
+  /* width: 100%; */
   justify-content: space-between;
-
+padding: 0 10px;
   gap: 20px;
 }
 .content {
-  background-color: rgb(226, 203, 181);
-  height: 200px;
-  width: 70%;
+  background-color: rgb(255, 228, 206);
+  /* height: 200px; */
+  width: auto;
+  overflow: hidden;
   border-radius: 20px;
   padding: 10px;
 }
 .cards {
   background-color: #fffdf5;
   height: 100%;
-  /* width: 100%; */
+  width: auto;
+   box-shadow: 0 0 20px rgba(250, 186, 68, 0.3);
   border-radius: 20px;
   display: flex;
   padding: 20px;
+ 
   justify-content: center;
   flex-wrap: wrap;
   gap: 40px;
 }
+.bag-items{
+   background-color: rgb(255, 247, 241);
+  height: auto;
+  padding: 20px;
+  width: 50%;
+ 
+  border-radius: 20px;
+}
+#addedItems{
+  padding-top: 10px;
+  /* background-color: rgb(231, 197, 164); */
+}
+.cart-item-info{
+  display: flex;
+  justify-content: space-between;
+}
+.item-cart{
+  background-color: white;
+  padding: 10px;
+  margin: 10px 0;
+}
 .bag {
-  background-color: rgb(236, 178, 124);;;
+  background-color: rgb(236, 178, 124);
   height: 200px;
   padding: 10px;
   width: 30%;
   border-radius: 20px;
 }
-.card {
-  max-width: 300px;
-  border: none;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  height: 400px;
-   overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  border-radius: 20px;
+.bag-img{
+  width: 60px;
+  height: 60px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
-
-.card img {
+.popular-items{
+  display: flex;
+  overflow: hidden;
+  padding-top: 10px;
+ 
+  justify-content: space-between;
+}
+.popular-item{
+  background-color:rgb(235, 210, 187); ;
+  width: 130px;
+  height: 130px;
+  padding: 10px;
+  margin: 0 10px;
+  border-radius: 10px;
+}
+/* .card img {
   width: 100%;
-  /* height: 100%; */
   object-fit: cover;
   border-bottom: 1px solid #ccc;
-}
+} */
 
 .card-info {
   padding: 10px;
 }
 
 .card-name {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
   margin: 5px 0;
   overflow: hidden;
+  font-weight: 400;
   text-overflow: ellipsis;
   white-space: nowrap;
+  color:rgb(95, 48, 4) ;
 }
 
 .card-price {
-  color: #007bff;
+  color: #325a46;
   font-size: 16px;
+  text-align: left;
+  /* background-color: rebeccapurple; */
+  
+}
+.card-price::after{
+
+
 }
 /* Tablet breakpoint */
+@media only screen and (max-width: 1500px) {
+.flex-col{
+  width: 100%;
+}
+.main-layout{
+  flex-direction: column;
+}
+  aside {
+    height: auto;
+    width: auto;
+  }
+   .icon-container {
+    
+            flex-direction: row !important;
+        }
+}
 @media only screen and (max-width: 780px) {
 
   .main-section {
     flex-direction: column;
+   
   }
-  .content {
+  
+ .bag-items{
+  width: auto !important;
+ order: -1;
+}
+  /* .content {
     width: auto;
-  }
+  } */
   .bag {
     width: auto;
   }
@@ -119,28 +233,47 @@ aside {
 
 /* Mobile breakpoint */
 @media only screen and (max-width: 599px) {
-  .flex-col {
-    padding: 10px 0;
-  }
+  /* .flex-col {
+    padding: 10px 0; width: 100%;
+  }  */
+ 
   .card {
     width: 100%;
-    /* border: 2px solid red; */
   }
   .main-section {
     flex-direction: column;
   }
-  .content {
-    width: 100%;
-  }
+
   .bag {
     width: auto;
   }
   .main-layout {
     flex-direction: column;
     padding: 0;
+    
   }
   aside {
     height: auto;
     width: auto;
   }
 }
+    .icon-container {
+        display: flex;
+        flex-direction: column; /* Stack icons vertically by default */
+        align-items: center;
+        margin: 20px;
+    }
+
+    .icon-container i{
+        font-size: 2em;
+        margin: 10px;      
+
+        cursor: pointer;
+    }
+
+    /* Media query to switch to horizontal layout on smaller screens */
+    /* @media screen and (max-width: 600px) {
+        .icon-container {
+            flex-direction: row;
+        }
+    } */
