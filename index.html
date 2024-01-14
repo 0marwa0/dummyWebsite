@@ -5,10 +5,59 @@
     <link href="./style/index.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+
+<script>
+  // Fetch data from the API
+  fetch('https://fakestoreapi.com/products')
+    .then(response => response.json())
+    .then(data => {
+      // Get the container element
+      const productContainer = document.getElementById('productContainer');
+
+      // Loop through the data and create cards
+      data.forEach(product => {
+        // Create card element
+        const card = document.createElement('div');
+        card.className = 'card';
+
+        const imgContainer = document.createElement('div');
+        imgContainer.className="imageContainer"
+        // Create image element
+        const image = document.createElement('img');
+
+        image.src = product.image;
+        image.alt = 'Product Image';
+        imgContainer.appendChild(image)
+        // Create card info element
+        const cardInfo = document.createElement('div');
+        cardInfo.className = 'card-info';
+
+        // Create card name element
+        const cardName = document.createElement('div');
+        cardName.className = 'card-name';
+        cardName.textContent = product.title;
+
+        // Create card price element
+        const cardPrice = document.createElement('div');
+        cardPrice.className = 'card-price';
+        cardPrice.textContent = `$${product.price}`;
+
+        // Append elements to card
+        cardInfo.appendChild(cardName);
+        cardInfo.appendChild(cardPrice);
+        card.appendChild(imgContainer);
+        card.appendChild(cardInfo);
+
+        // Append card to container
+        productContainer.appendChild(card);
+      });
+    })
+    .catch(error => console.error('Error fetching data:', error));
+</script>
   </head>
   <body>
     <nav>
-      <img src="./assets/icons/logo.png" class="logo-icon" />
+      <img src="./assets/icons/icon.png" class="logo-icon" />
     </nav>
     <div class="main-layout">
       <aside>aside</aside>
@@ -18,51 +67,37 @@
           <div class="bag">bag items</div>
         </div>
 
-        <div class="cards">
-          <div class="card">
+        <div class="cards" id="productContainer">
+          <!-- <div class="card">
+            <div class="imageContainer">
             <img src="https://fakeimg.pl/250x300/" alt="Product Image" />
+          </div>
             <div class="card-info">
               <div class="card-name">Product Name</div>
               <div class="card-price">$19.99</div>
             </div>
           </div>
 
-          <div class="card">
+         <div class="card">
+            <div class="imageContainer">
             <img src="https://fakeimg.pl/250x300/" alt="Product Image" />
+          </div>
             <div class="card-info">
               <div class="card-name">Product Name</div>
               <div class="card-price">$19.99</div>
             </div>
           </div>
           <div class="card">
+            <div class="imageContainer">
             <img src="https://fakeimg.pl/250x300/" alt="Product Image" />
+          </div>
             <div class="card-info">
               <div class="card-name">Product Name</div>
               <div class="card-price">$19.99</div>
             </div>
           </div>
-          <div class="card">
-            <img src="https://fakeimg.pl/250x300/" alt="Product Image" />
-            <div class="card-info">
-              <div class="card-name">Product Name</div>
-              <div class="card-price">$19.99</div>
-            </div>
-          </div>
-
-          <div class="card">
-            <img src="https://fakeimg.pl/250x300/" alt="Product Image" />
-            <div class="card-info">
-              <div class="card-name">Product Name</div>
-              <div class="card-price">$19.99</div>
-            </div>
-          </div>
-          <div class="card">
-            <img src="https://fakeimg.pl/250x300/" alt="Product Image" />
-            <div class="card-info">
-              <div class="card-name">Product Name</div>
-              <div class="card-price">$19.99</div>
-            </div>
-          </div>
+      -->
+      
         </div>
       </div>
     </div>

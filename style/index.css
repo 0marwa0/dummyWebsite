@@ -1,7 +1,16 @@
 nav {
-  border: 1px solid #6c0b6e;
+  border: 1px solid rgb(107, 54, 4);
   height: 40px;
   padding: 10px;
+}
+.imageContainer{
+  width: 300px;
+  height: 300px;
+}
+.imageContainer img{
+  width: 100%;
+  height: 100%;
+ object-fit: contain 
 }
 .flex-col {
   display: flex;
@@ -15,7 +24,7 @@ nav {
   height: 30px;
 }
 aside {
-  background-color: #6c0b6e;
+  background-color: rgb(107, 54, 4);;
   height: 100vh;
   padding: 10px;
   margin-top: 20px;
@@ -34,14 +43,14 @@ aside {
   gap: 20px;
 }
 .content {
-  background-color: #fdeffd;
+  background-color: rgb(226, 203, 181);
   height: 200px;
   width: 70%;
   border-radius: 20px;
   padding: 10px;
 }
 .cards {
-  background-color: #e5f4fa;
+  background-color: #fffdf5;
   height: 100%;
   /* width: 100%; */
   border-radius: 20px;
@@ -49,10 +58,10 @@ aside {
   padding: 20px;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 40px;
 }
 .bag {
-  background-color: #e5f4fa;
+  background-color: rgb(236, 178, 124);;;
   height: 200px;
   padding: 10px;
   width: 30%;
@@ -60,10 +69,14 @@ aside {
 }
 .card {
   max-width: 300px;
-  border: 1px solid #ccc;
+  border: none;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align: center;
   height: 400px;
+   overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  border-radius: 20px;
 }
 
 .card img {
@@ -81,6 +94,9 @@ aside {
   font-size: 18px;
   font-weight: bold;
   margin: 5px 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .card-price {
@@ -89,6 +105,7 @@ aside {
 }
 /* Tablet breakpoint */
 @media only screen and (max-width: 780px) {
+
   .main-section {
     flex-direction: column;
   }
