@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.0.0/dist/css/themes/splide-default.min.css">
 <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.0.0/dist/js/splide.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <title>Document</title>
@@ -34,12 +35,17 @@
                      600: {
                         perPage: 2,  // Number of slides to show at 600px screen width
                     },
+                     380: {
+                        perPage: 1,  // Number of slides to show at 600px screen width
+                    },
                 },
+                
         }).mount();
     });
 </script>
 
 <script>
+
         document.addEventListener('DOMContentLoaded', function () {
             // Fetch data from the API
             fetch('https://fakestoreapi.com/products')
@@ -52,7 +58,7 @@
 
                     data.forEach(product => {
                         const card = document.createElement('div');
-                        card.className = 'card';
+                        card.className = 'card product-wrapper';
 
                         const imgContainer = document.createElement('div');
                         imgContainer.className = 'imageContainer';
@@ -71,7 +77,8 @@
                         const cardPrice = document.createElement('div');
                         const cardBtn = document.createElement('div');
                         const cardAction = document.createElement('div');
-                        cardBtn.className = 'card-btn';
+                        cardBtn.className = 'card-btn product__add-to-cart-button';
+
                         cardAction.className = 'action';
                         cardPrice.className = 'card-price';
                         cardPrice.textContent = `$${product.price}`;
@@ -86,13 +93,14 @@
                             addedItemsContainer.innerHTML =
                              cartItems.map(item => `<div class="item-cart">
                               <div class="cart-item-info">
-                            <img src=${item.image} class="bag-img" alt="Product Image" />
-                           
-</div>
-                              <div>
+                                <div class="bag-img">
+                            <img src=${item.image}  alt="Product Image" />
+                  </div>
+
+                              <div class="cart-item-title">
 
                               ${item.title}
-                              </div>
+                              </div></div>
                               
                               </div>`).join('');
                         });
@@ -142,46 +150,50 @@
 
         
           <div class="content">
-            <div>Most popular itmes</div>
+            <div class="content-titel">Most popular itmes
+
+                  <i class="fa fa-chart-bar"></i>
+
+            </div>
             <div class="popular-items">
               <div id="splide" class="splide">
     <div class="splide__track">
         <ul class="splide__list">
             <li class="splide__slide">
-             <img  src="https://fakestoreapi.com/img/51eg55uWmdL._AC_UX679_.jpg" class="popular-item" alt="Product Image" />
+             <img  src="https://fakeimg.pl/130x130/" class="popular-item" alt="Product Image" />
             </li>
             <li class="splide__slide">
-              <img  src="https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg" class="popular-item" alt="Product Image" />
+              <img  src="https://fakeimg.pl/130x130/" class="popular-item" alt="Product Image" />
 </li>
          <li class="splide__slide">
-             <img  src="https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_.jpg" class="popular-item" alt="Product Image" />
+             <img  src="https://fakeimg.pl/130x130/" class="popular-item" alt="Product Image" />
             </li>
             <li class="splide__slide">
-              <img  src="https://fakestoreapi.com/img/71z3kpMAYsL._AC_UY879_.jpg" class="popular-item" alt="Product Image" />
+              <img  src="https://fakeimg.pl/130x130/" class="popular-item" alt="Product Image" />
 </li>
          <li class="splide__slide">
-             <img  src="https://fakestoreapi.com/img/81XH0e8fefL._AC_UY879_.jpg" class="popular-item" alt="Product Image" />
+             <img  src="https://fakeimg.pl/130x130/" class="popular-item" alt="Product Image" />
             </li>
             <li class="splide__slide">
-              <img  src="https://fakestoreapi.com/img/81QpkIctqPL._AC_SX679_.jpg" class="popular-item" alt="Product Image" />
+              <img  src="https://fakeimg.pl/130x130/" class="popular-item" alt="Product Image" />
 </li>
              <li class="splide__slide">
-             <img  src="https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_.jpg" class="popular-item" alt="Product Image" />
+             <img  src="https://fakeimg.pl/130x130/" class="popular-item" alt="Product Image" />
             </li>
             <li class="splide__slide">
-              <img  src="https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_.jpg" class="popular-item" alt="Product Image" />
+              <img  src="https://fakeimg.pl/130x130/" class="popular-item" alt="Product Image" />
 </li>
          <li class="splide__slide">
-             <img  src="https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_.jpg" class="popular-item" alt="Product Image" />
+             <img  src="https://fakeimg.pl/130x130/" class="popular-item" alt="Product Image" />
             </li>
             <li class="splide__slide">
-              <img  src="https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg" class="popular-item" alt="Product Image" />
+              <img  src="https://fakeimg.pl/130x130/" class="popular-item" alt="Product Image" />
 </li>
          <li class="splide__slide">
-             <img  src="https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg" class="popular-item" alt="Product Image" />
+             <img  src="https://fakeimg.pl/130x130/" class="popular-item" alt="Product Image" />
             </li>
             <li class="splide__slide">
-              <img  src="https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg" class="popular-item" alt="Product Image" />
+              <img  src="https://fakeimg.pl/130x130/" class="popular-item" alt="Product Image" />
 </li>    
         </ul>
     </div>

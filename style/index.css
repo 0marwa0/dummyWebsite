@@ -7,24 +7,34 @@ body{
             margin: 0;   /* Remove any default margin */
             padding: 0;  /* Remove any default padding */
         }
+        .content-titel{
+          font-size: 20px;
+          color: rgb(88, 51, 9);
+          padding: 20px ;
+        }
+        .splide__track {
+          height: 100%;
+        }
 .action{
   display: flex;
   justify-content: space-between;
 }
 .card-btn{
   padding:0 5px;
-  color: rgb(107, 54, 4);
+  background-color: navy;
   border-radius: 5px;
+  color: white;
+  width: 80px;
   cursor: pointer;
      box-shadow: 0 0 5px rgba(22, 15, 2, 0.3);
 
 }
 #cartCount{
-  background-color:rgb(226, 203, 181);
+  background-color:rgb(207, 207, 231);
    padding: 3px 9px;
    border-radius: 10px ;
    height: max-content;
-   font-size: 14px;
+   font-size: 10px;
 
 }
 .nav-cart{
@@ -32,7 +42,9 @@ body{
        width: auto; gap: 2px; align-items: end;
 }
 nav {
-  border: 1px solid rgb(107, 54, 4);
+  /* border: 1px solid rgb(107, 54, 4); */
+  border: 1px solid navy;
+
   height: 40px;
   padding: 10px;
   display: flex;
@@ -72,7 +84,7 @@ nav {
   height: 30px;
 }
 aside {
-  background-color: rgb(107, 54, 4);;
+  background-color: navy;
   height: 100vh;
   padding: 10px;
   margin-top: 20px;
@@ -94,33 +106,38 @@ padding: 0 10px;
   gap: 20px;
 }
 .content {
-  background-color: rgb(255, 228, 206);
+  /* background-color: rgb(253, 247, 243); */
   /* height: 200px; */
   width: auto;
   overflow: hidden;
   border-radius: 20px;
   padding: 10px;
+            border: 1px solid navy;
+
 }
 .cards {
-  background-color: #fffdf5;
+  /* background-color: #fffdf5; */
   height: 100%;
   width: auto;
-   box-shadow: 0 0 20px rgba(250, 186, 68, 0.3);
+   /* box-shadow: 0 0 20px rgba(250, 186, 68, 0.3); */
   border-radius: 20px;
   display: flex;
   padding: 20px;
- 
+ border: 1px solid rgb(207, 205, 205);
   justify-content: space-between;
   row-gap: 20px;
   flex-wrap: wrap;
   /* gap: 40px; */
 }
 .bag-items{
-   background-color: rgb(255, 247, 241);
+   /* background-color: rgb(255, 247, 241); */
   height: auto;
   padding: 20px;
   width: 50%;
- 
+  box-shadow: 0 0 20px rgba(178, 183, 236, 0.3);
+
+             /* border: 1px solid rgb(212, 149, 12); */
+
   border-radius: 20px;
 }
 #addedItems{
@@ -129,12 +146,39 @@ padding: 0 10px;
 }
 .cart-item-info{
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
+  flex-direction: row;
+  gap: 10px;
+  font-size: 14px;
+  color: rgb(88, 87, 87);
+  width: 180px; /* Adjust the width as needed */
+
+  /* Hide overflowing text and show dots */
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  /* Prevent text from wrapping onto the next line */
+  white-space: nowrap;
 }
 .item-cart{
-  background-color: white;
+  background-color: rgb(249, 249, 255);
   padding: 10px;
   margin: 10px 0;
+ 
+   
+}
+.item-cart img{
+  /* width: auto; */
+  height: 100%;
+   object-fit: cover;
+}
+.cart-item-title{
+
+    overflow: hidden;
+  text-overflow: ellipsis;
+
+  /* Prevent text from wrapping onto the next line */
+  white-space: nowrap;
 }
 .bag {
   background-color: rgb(236, 178, 124);
@@ -144,10 +188,12 @@ padding: 0 10px;
   border-radius: 20px;
 }
 .bag-img{
-  width: 60px;
-  height: 60px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  width: 100px;
+  height: 50px;
+ 
+  border-radius: 8px;
+  /* border: 1px solid red; */
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); */
 }
 .popular-items{
   display: flex;
@@ -157,7 +203,7 @@ padding: 0 10px;
   justify-content: space-between;
 }
 .popular-item{
-  background-color:rgb(235, 210, 187); ;
+  background-color:rgb(245, 242, 238); ;
   width: 130px;
   height: 130px;
   padding: 10px;
@@ -192,10 +238,7 @@ padding: 0 10px;
   /* background-color: rebeccapurple; */
   
 }
-.card-price::after{
 
-
-}
 /* Tablet breakpoint */
 @media only screen and (max-width: 1500px) {
 .flex-col{
@@ -247,7 +290,9 @@ padding: 0 10px;
   /* .flex-col {
     padding: 10px 0; width: 100%;
   }  */
- 
+ .content-titel{
+  padding: 5px;
+ }
   .card {
     width: 100%;
   }
@@ -282,9 +327,6 @@ padding: 0 10px;
         cursor: pointer;
     }
 
-    /* Media query to switch to horizontal layout on smaller screens */
-    /* @media screen and (max-width: 600px) {
-        .icon-container {
-            flex-direction: row;
-        }
-    } */
+    /* ainmation */
+   
+
