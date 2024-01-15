@@ -84,7 +84,7 @@ background-color: rgb(238, 238, 253);
   flex-direction: column;
   width: 93%;
   gap: 20px;
-  padding: 20px 10px;
+  padding: 20px 0;
 
 }
 .logo-icon {
