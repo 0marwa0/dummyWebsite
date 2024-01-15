@@ -63,7 +63,7 @@
                         const imgContainer = document.createElement('div');
                         imgContainer.className = 'imageContainer';
                         const image = document.createElement('img');
-                        image.src = product.image;
+                        image.src = "./assets/icons/item.png";
                         image.alt = 'Product Image';
                         imgContainer.appendChild(image);
 
@@ -94,7 +94,7 @@
                              cartItems.map(item => `<div class="item-cart">
                               <div class="cart-item-info">
                                 <div class="bag-img">
-                            <img src=${item.image}  alt="Product Image" />
+                            <img src='./assets/icons/item.png'  alt="Product Image" />
                   </div>
 
                               <div class="cart-item-title">
@@ -128,7 +128,7 @@
       >
 
       
-      <img src="./assets/icons/icon.png" class="logo-icon" />
+      <img src="./assets/icons/icon-.png" class="logo-icon" />
       <span id="cartCount">0</span>
 </div>
     </nav>
